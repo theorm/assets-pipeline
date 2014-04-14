@@ -1,0 +1,27 @@
+{
+  "name": "assets-pipeline",
+  "version": "0.0.1",
+  "description": "Assets pipeline for node.js",
+  "keywords": ["assets", "pipeline", "static", "cdn", "less", "css", "js", "images", "web"],
+  "author": "Roman Kalyakin <roman@kalyakin.com>",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/theorm/assets-pipeline.git"
+  },
+  "dependencies": {
+    "lodash": "~2.4.1",
+    "less": "~1.7.0",
+    "uglify-js": "~2.4.13",
+    "bluebird": "~1.2.1",
+    "knox": "~0.8.9",
+    "clean-css": "~2.1.8",
+    "recursive-readdir": "~1.0.0",
+    "mime": "~1.2.11",
+    "git-rev": "~0.2.1"
+  },
+  "devDependencies": {
+    "mocha": "*",
+    "should": "*"
+  },
+  "main": "index"
+}
