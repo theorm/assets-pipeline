@@ -2,7 +2,17 @@
   "name": "assets-pipeline",
   "version": "0.0.1",
   "description": "Assets pipeline for node.js",
-  "keywords": ["assets", "pipeline", "static", "cdn", "less", "css", "js", "images", "web"],
+  "keywords": [
+    "assets",
+    "pipeline",
+    "static",
+    "cdn",
+    "less",
+    "css",
+    "js",
+    "images",
+    "web"
+  ],
   "author": "Roman Kalyakin <roman@kalyakin.com>",
   "repository": {
     "type": "git",
@@ -17,7 +27,8 @@
     "clean-css": "~2.1.8",
     "recursive-readdir": "~1.0.0",
     "mime": "~1.2.11",
-    "git-rev": "~0.2.1"
+    "execSync": "~1.0.1-pre",
+    "mkdirp": "~0.4.0"
   },
   "devDependencies": {
     "mocha": "*",
