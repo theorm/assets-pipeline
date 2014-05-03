@@ -10,6 +10,10 @@ var assets = new Assets({
   less: {
     lib: ["less/baz.less"]
   },
+  statics: [
+    'favicon.ico',
+    'txt/'
+  ],
   assetsDirectory: __dirname + "/assets",
   deployment: {
       method: "cp",

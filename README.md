@@ -10,7 +10,7 @@ Usage
 Initialize assets like this:
 
 ```js
-var assets = Assets({
+var assets = new Assets({
     js: {
         app: [
             "js/myapp.js"
@@ -20,6 +20,20 @@ var assets = Assets({
             "js/angular.js"
         ]
     },
+    css: {
+        app: [
+            "css/theme.css"
+        ]
+    },
+    less: {
+        lib: [
+            "less/theme.less"
+        ]
+    },
+    statics: [
+        "favico.ico",
+        "img"
+    ],
     assetsDirectory: __dirname + "/assets",
     deployment: {
         method: "cp",

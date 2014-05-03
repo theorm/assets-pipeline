@@ -28,7 +28,8 @@
     "recursive-readdir": "~1.0.0",
     "mime": "~1.2.11",
     "execSync": "~1.0.1-pre",
-    "mkdirp": "~0.4.0"
+    "mkdirp": "~0.4.0",
+    "ncp": "~0.5.1"
   },
   "devDependencies": {
     "mocha": "*",
