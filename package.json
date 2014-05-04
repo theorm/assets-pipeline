@@ -12,7 +12,12 @@
     "js",
     "scp",
     "images",
-    "web"
+    "web",
+    "version",
+    "cachebuster",
+    "cache",
+    "minify",
+    "compress"
   ],
   "author": "Roman Kalyakin <roman@kalyakin.com>",
   "repository": {
