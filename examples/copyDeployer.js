@@ -15,9 +15,17 @@ var assets = new Assets({
     'txt/'
   ],
   assetsDirectory: __dirname + "/assets",
+  // deployment: {
+  //     method: "cp",
+  //     location: "/tmp/assets-test"
+  // },
   deployment: {
-      method: "cp",
-      location: "/tmp/assets-test"
+    method: "s3",
+    key: process.env.S3_KEY,
+    secret: process.env.S3_SECRET,
+    bucket: 'theorm-test',
+    prefix: '/foo',
+    headers: {'x-amz-meta-foo': 'bar'},
   },
   localPrefix: '/assets',
   productionPrefix: 'http://mycdn.com/myapp',
@@ -34,6 +42,6 @@ assets.deploy(function(err) {
     console.error(err);
     console.log("Not done");
   } else {
-    console.log("Done");
+    console.log("Done!");
   }
 });
