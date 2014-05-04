@@ -15,18 +15,25 @@ var assets = new Assets({
     'txt/'
   ],
   assetsDirectory: __dirname + "/assets",
-  // deployment: {
-  //     method: "cp",
-  //     location: "/tmp/assets-test"
-  // },
   deployment: {
-    method: "s3",
-    key: process.env.S3_KEY,
-    secret: process.env.S3_SECRET,
-    bucket: 'theorm-test',
-    prefix: '/foo',
-    headers: {'x-amz-meta-foo': 'bar'},
+      method: "cp",
+      prefix: "/tmp/assets-test"
   },
+  // deployment: {
+  //   method: "s3",
+  //   key: process.env.S3_KEY,
+  //   secret: process.env.S3_SECRET,
+  //   bucket: 'theorm-test',
+  //   prefix: '/foo',
+  //   headers: {'x-amz-meta-foo': 'bar'},
+  // },
+  // deployment: {
+  //   method: "scp",
+  //   host: "localhost",
+  //   username: "roman",
+  //   privateKey: require('fs').readFileSync("/Users/roman/.ssh/id_rsa"),
+  //   prefix: "/tmp/scp-assets"
+  // },
   localPrefix: '/assets',
   productionPrefix: 'http://mycdn.com/myapp',
   useCachebuster: true
