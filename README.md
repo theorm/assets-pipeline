@@ -41,7 +41,8 @@ var assets = new Assets({
     },
     production: process.env.NODE_ENV === 'production', // render sources or deployed
     localPrefix: '/assets', // sources are rendered with this prefix
-    productionPrefix: 'http://mycdn.com/myapp' // deployed are rendered with this prefix
+    productionPrefix: 'http://mycdn.com/myapp', // deployed are rendered with this prefix
+    useCachebuster: true // use git versin or Date() as css and js files suffix ("app.js" -> "app-12312312312312.js"). default false
 });
 
 // "/assets/app.js" or "http://mycdn.com/myapp/app.js"
