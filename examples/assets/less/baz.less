@@ -1,7 +1,11 @@
-@black: #000;
+@text-color: #333;
+@emphasize-color: darken(hsl(hue(@text-color), 65%, 90%), 30%);
 
-.black {
-    > * {
-        color: @black;
+body {
+    font-family: sans-serif;
+    color: @text-color;
+
+    strong {
+        color: @emphasize-color;
     }
 }

@@ -43,12 +43,14 @@ var assets = new Assets({
     localPrefix: '/assets', // sources are rendered with this prefix
     productionPrefix: 'http://mycdn.com/myapp', // deployed are rendered with this prefix
     useCachebuster: true // use git versin or Date() as css and js files suffix ("app.js" -> "app-12312312312312.js"). default false
+    // lessScriptUrl: '/assets/js/less.js' // defaults to a cdn file
 });
 
 // "/assets/app.js" or "http://mycdn.com/myapp/app.js"
 console.log(assets.jsToHtml('app'));
 console.log(assets.cssToHtml('app'));
 console.log(assets.lessToHtml('app'));
+console.log(assets.staticUrl('favicon.ico'));
 
 assets.deploy(function(err) {
   if (err) {
@@ -72,7 +74,7 @@ Deployers
  ```js
  deployment: {
     method: "cp",
-    prefix: "/opt/myapp/assets"
+    prefix: "/opt/myapp/assets", // directory where assets are uploaded
  }
  ```
 
@@ -83,7 +85,7 @@ Deployers
  ```js
  deployment: {
     method: "scp",
-    prefix: "/opt/myapp/assets"
+    prefix: "/opt/myapp/assets" // directory on the server where assets are uploaded
     host: "mycdn.com",
     username: "me",
     privateKey: require('fs').readFileSync("/Users/me/.ssh/id_rsa"),
@@ -100,8 +102,12 @@ Deployers
     key: process.env.S3_KEY,
     secret: process.env.S3_SECRET,
     bucket: 'my-cdn-bucket',
-    prefix: '/assets',
+    prefix: '/assets', // prefix (directory) added to every file name.
     headers: {'x-amz-meta-extra-header': 'bar'},
  }
  ```
 
+Example
+=======
+
+There is an example application in `examples` directory to try it out.

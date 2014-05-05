@@ -1,0 +1,25 @@
+html
+  head
+    link(href=assets.staticUrl('favicon.ico'), rel="shortcut icon")
+    != assets.cssToHtml('lib')
+    != assets.lessToHtml('app')
+    != assets.jsToHtml('app')
+  body
+    block content
+        h1 Example of assets pipeline
+        if assets.options.production
+            p This application is running in <strong>production</strong> mode. Set <strong>NODE_ENV</strong> environment variable to <strong>"development"</strong> to see how the tags below change.
+        else
+            p This application is running in <strong>development</strong> mode. Set <strong>NODE_ENV</strong> environment variable to <strong>"producdtion"</strong> to see how the tags below change.
+
+        p <strong>CSS</strong> files in the header of this page:
+        code
+            = assets.cssToHtml('lib')
+
+        p <strong>LESS</strong> files in the header of this page:
+        code
+            = assets.lessToHtml('app')
+
+        p <strong>JS</strong> files in the header of this page:
+        code
+            = assets.jsToHtml('app')
