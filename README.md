@@ -110,4 +110,4 @@ Deployers
 Example
 =======
 
-There is an example application in `examples` directory to try it out.
+There is an example express application in `examples` directory to try it out.

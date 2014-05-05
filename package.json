@@ -1,6 +1,6 @@
 {
   "name": "assets-pipeline",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Assets pipeline for node.js",
   "keywords": [
     "assets",
@@ -17,7 +17,8 @@
     "cachebuster",
     "cache",
     "minify",
-    "compress"
+    "compress",
+    "express"
   ],
   "author": "Roman Kalyakin <roman@kalyakin.com>",
   "repository": {
