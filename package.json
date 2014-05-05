@@ -23,7 +23,7 @@
   "author": "Roman Kalyakin <roman@kalyakin.com>",
   "repository": {
     "type": "git",
-    "url": "git://github.com/theorm/assets-pipeline.git"
+    "url": "http://github.com/theorm/assets-pipeline.git"
   },
   "dependencies": {
     "lodash": "~2.4.1",
