@@ -18,6 +18,7 @@ var productionAssetsLocation = '/tmp/assets-pipeline-test-assets';
 var assetsPrefix = '/assets';
 // our 'cdn' where we serve compiled assets from
 var productionAssetsUrl = fmt('http://localhost:%s%s', port, assetsPrefix)
+// var productionAssetsUrl = "http://s3.amazonaws.com/theorm-test/foo"
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
@@ -63,7 +64,8 @@ var assets = new Assets({
   //   secret: process.env.S3_SECRET,
   //   bucket: 'theorm-test',
   //   prefix: '/foo',
-  //   headers: {'x-amz-meta-foo': 'bar'},
+  //   headers: {'x-amz-meta-custom-header': 'foo bar'},
+  //   gzipContentTypes: ['text/css', 'application/javascript', 'image/x-icon']
   // },
   // deployment: {
   //   method: "scp",

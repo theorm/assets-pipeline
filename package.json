@@ -1,7 +1,7 @@
 {
   "name": "assets-pipeline",
-  "version": "0.0.4",
-  "description": "Smart assets pipeline for node.js. Minify, compile and deploy Javascript, CSS and Less locally, to S3 or via SCP. Cachebuster included.",
+  "version": "0.0.5",
+  "description": "Smart assets pipeline for node.js.",
   "keywords": [
     "assets",
     "pipeline",
@@ -18,7 +18,10 @@
     "cache",
     "minify",
     "compress",
-    "express"
+    "express",
+    "s3",
+    "aws",
+    "gzip"
   ],
   "author": "Roman Kalyakin <roman@kalyakin.com>",
   "homepage": "http://github.com/theorm/assets-pipeline",

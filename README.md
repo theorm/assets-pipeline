@@ -1,8 +1,7 @@
 assets-pipeline
 ===============
 
-Assets pipeline for node.js
-
+Smart assets pipeline for node.js. Minify, compile and deploy Javascript, CSS and Less locally, to S3 or via SCP. Cachebuster included.
 
 Usage
 =====
@@ -80,7 +79,7 @@ Deployers
 
 * scp
 
- Copy files remotely (See `scp2` npm module for more configuration options).
+ Copy files remotely (See [scp2](https://www.npmjs.org/package/scp2) npm module for more configuration options).
 
  ```js
  deployment: {
@@ -94,7 +93,7 @@ Deployers
 
 * s3
 
- Upload files to S3 (See `knox` npm module for more configuration options).
+ Upload files to S3 (See [knox](https://www.npmjs.org/package/knox) npm module for more configuration options). The deployer will guess MIME type of each file and add a relevant `Content-Type` header.
 
  ```js
  deployment: {
@@ -103,11 +102,12 @@ Deployers
     secret: process.env.S3_SECRET,
     bucket: 'my-cdn-bucket',
     prefix: '/assets', // prefix (directory) added to every file name.
-    headers: {'x-amz-meta-extra-header': 'bar'},
+    headers: {'x-amz-meta-extra-header': 'bar'}, // optional S3 metadata
+    gzipContentTypes: ['text/css', 'application/javascript'], // gzip content of the files with the following type before uploading. This will also add 'Content-Encoding: gzip' to these files. By default the list is empty (nothing is gzipped).
  }
  ```
 
 Example
 =======
 
-There is an example express application in `examples` directory to try it out.
+There is an example express application in [examples](./examples) directory to try it out.
